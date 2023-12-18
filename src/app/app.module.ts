@@ -74,6 +74,8 @@ import { UserReplyPlistUnroutedComponent } from './components/reply/user-reply-p
 import { UserReplyDetailUnroutedComponent } from './components/reply/user-reply-detail-unrouted/user-reply-detail-unrouted.component';
 import { UserReplyFormUnroutedComponent } from './components/reply/user-reply-form-unrouted/user-reply-form-unrouted.component';
 import { TranslocoRootModule } from './transloco-root.module';
+import { AdminUserResetPasswordRoutedComponent } from './components/user/admin-user-reset-password-routed/admin-user-reset-password-routed.component';
+import { AdminUserNewPasswordRoutedComponent } from './components/user/admin-user-new-password-routed/admin-user-new-password-routed.component';
 
 
 //--
@@ -97,6 +99,8 @@ import { TranslocoRootModule } from './transloco-root.module';
     AdminUserSelectionUnroutedComponent,
     UserUserFeaturedUnroutedComponent,
     UserUserDetailUnroutedComponent,
+    AdminUserResetPasswordRoutedComponent,
+    AdminUserNewPasswordRoutedComponent,
     //--
     AdminThreadPlistRoutedComponent,
     AdminThreadViewRoutedComponent,

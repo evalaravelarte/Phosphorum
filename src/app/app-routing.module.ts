@@ -19,6 +19,8 @@ import { AdminThreadViewRoutedComponent } from './components/thread/admin-thread
 import { AdminReplyViewRoutedComponent } from './components/reply/admin-reply-view-routed/admin-reply-view-routed.component';
 import { LoginRoutedComponent } from './components/shared/login-routed/login-routed.component';
 import { LogoutRoutedComponent } from './components/shared/logout-routed/logout-routed.component';
+import { AdminUserResetPasswordRoutedComponent } from './components/user/admin-user-reset-password-routed/admin-user-reset-password-routed.component';
+import { AdminUserNewPasswordRoutedComponent } from './components/user/admin-user-new-password-routed/admin-user-new-password-routed.component';
 
 
 const routes: Routes = [
@@ -31,6 +33,8 @@ const routes: Routes = [
   { path: 'admin/user/view/:id', component: AdminUserViewRoutedComponent },    
   { path: 'admin/user/new', component: AdminUserNewRoutedComponent },
   { path: 'admin/user/edit/:id', component: AdminUserEditRoutedComponent },
+  { path: 'admin/user/reset-password', component: AdminUserResetPasswordRoutedComponent }, 
+  { path: 'admin/user/new-password/:token', component: AdminUserNewPasswordRoutedComponent },
   //--  
   { path: 'admin/thread/plist', component: AdminThreadPlistRoutedComponent },
   { path: 'admin/thread/plist/byuser/:id', component: AdminThreadPlistRoutedComponent },
