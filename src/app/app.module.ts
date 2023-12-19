@@ -76,6 +76,7 @@ import { UserReplyFormUnroutedComponent } from './components/reply/user-reply-fo
 import { TranslocoRootModule } from './transloco-root.module';
 import { AdminUserResetPasswordRoutedComponent } from './components/user/admin-user-reset-password-routed/admin-user-reset-password-routed.component';
 import { AdminUserNewPasswordRoutedComponent } from './components/user/admin-user-new-password-routed/admin-user-new-password-routed.component';
+import { ResetPasswordAjaxService } from './service/resetPassword.ajax.service';
 
 
 //--
@@ -164,6 +165,7 @@ import { AdminUserNewPasswordRoutedComponent } from './components/user/admin-use
     ThreadAjaxService,
     ReplyAjaxService,
     SessionAjaxService,
+    ResetPasswordAjaxService,
     CryptoService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
 
