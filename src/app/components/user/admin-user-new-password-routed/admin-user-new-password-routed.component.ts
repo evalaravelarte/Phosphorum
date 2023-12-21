@@ -2,7 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router  } from '@angular/router';
 import { ResetPasswordAjaxService } from 'src/app/service/resetPassword.ajax.service';
 
 @Component({
@@ -20,7 +20,8 @@ export class AdminUserNewPasswordRoutedComponent implements OnInit {
     private fb: FormBuilder,
     private oResetPasswordService: ResetPasswordAjaxService,
     private oMatSnackBar: MatSnackBar,
-    private oActivatedRoute: ActivatedRoute
+    private oActivatedRoute: ActivatedRoute,
+    private oRouter: Router,
   ) {
     this.token = (this.oActivatedRoute.snapshot.paramMap.get("token") || "1");
 
@@ -47,6 +48,7 @@ export class AdminUserNewPasswordRoutedComponent implements OnInit {
     this.oResetPasswordService.updatePassword(this.token, this.newForm.value.password, this.newForm.value.confirmPassword).subscribe({
       next: (data: string) => {
         this.oMatSnackBar.open("Password updated", "", {duration: 2000});
+        this.oRouter.navigate(['/login']);
       },
       error: (error: HttpErrorResponse) => {
         this.oMatSnackBar.open("Error updating password", "", {duration: 2000});
